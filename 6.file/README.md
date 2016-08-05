@@ -2,7 +2,8 @@
 - 异步读取文件 readFile
 
 - 同步
-```fs.readFileSync(filename,[options])
+```
+fs.readFileSync(filename,[options])
 ```
     - 每一个同步方法和异步方法都是成对出现的
     - 同步方法会阻塞主线程的执行，在数据没有返回之前不能执行后续代码
