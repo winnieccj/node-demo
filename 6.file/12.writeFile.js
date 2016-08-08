@@ -15,6 +15,6 @@ fs.writeFile('./write3.txt','web前端开发3',{flag:'a'},function(err){
     if(err){
         console.log( err )
     }
-});za       
+});
 
 fs.appendFile('./write4.txt','web前端开发4')
