@@ -25,6 +25,13 @@ fs.writeFileSync(filename,data,[options])
 ```
 fs.writeFile(filename,data,[options],callback)
 ```
+
+在原有基础上追加写入内容
+```
+fs.appendFile(filename,data,[options],callback)
+```
+异步的将数据添加到一个文件的尾部，如果文件不存在，会创建一个新的文件。data可以是一个string,也可以是原生的buffer
+
 ## 实现拷贝文件的方法function copy(src,target)
 
 ## 操作目录
@@ -42,3 +49,6 @@ fs.readdir()
 fs.exists()
 ```
 ## 路径
+
+
+
