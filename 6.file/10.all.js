@@ -1,7 +1,7 @@
-//ͬʱ��ȡ�����ļ�
+//同时读取两个文件
 var fs = require('fs');
 
-//������
+//计数器
 var person = {};
 function show(){
     if(Object.keys(person).length == 2){
