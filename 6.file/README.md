@@ -25,3 +25,20 @@ fs.writeFileSync(filename,data,[options])
 ```
 fs.writeFile(filename,data,[options],callback)
 ```
+## 实现拷贝文件的方法function copy(src,target)
+
+## 操作目录
+- 创建文件夹
+```
+fs.mkdir()
+```
+- 读取目录下所有的文件
+```
+fs.readdir()
+```
+- 获取一个文件或目录详情
+- 判断一个文件(或文件夹)是否存在
+```
+fs.exists()
+```
+## 路径
