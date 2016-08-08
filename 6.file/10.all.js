@@ -1,7 +1,7 @@
-//同时读取两个文件
+//同时锟斤拷取锟斤拷锟斤拷锟侥硷拷
 var fs = require('fs');
 
-//计数器
+//锟斤拷锟斤拷锟斤拷
 var person = {};
 function show(){
     if(Object.keys(person).length == 2){
@@ -19,5 +19,6 @@ fs.readFile('./8.age.txt','utf8',function(err,age){
     show();
 });
 
+//鍚屾椂璇诲彇澶氫釜鏂囦欢杩樻湁涓�涓噸瑕佹柟娉曪細 promise
 
 
