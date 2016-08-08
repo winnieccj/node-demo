@@ -1,4 +1,4 @@
-//同时读取两个文件
+//鍚屾椂璇诲彇涓や釜鏂囦欢
 var fs = require('fs');
 var name = fs.readFileSync('./8.name.txt','utf8');
 var age = fs.readFileSync('./8.age.txt','utf8');
