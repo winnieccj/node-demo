@@ -20,3 +20,11 @@ console.log( path.basename('18.path.js','.js') );
 
 //获取一个路径里文件的扩展名
 console.log( path.extname('18.path.js') );
+
+//从一个相对路径解析出一个绝对路径
+//以应用程序的所在目录为根起点
+console.log( path.resolve() );
+console.log( path.resolve('book','node.json') );
+
+//book文件夹下node.json这个不能更改了，但是需要得到mysql.json的路径
+console.log( path.resolve('book','node.json','..','mysql.json') );
