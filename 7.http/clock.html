@@ -6,8 +6,23 @@
 </head>
 <body>
 
-    <div id="mydiv"></div>
+    <div id="clock"></div>
 
-    <script></script>
+    <script>
+        window.onload = function(){
+            setInterval(function(){
+                //1.创建ajax对象
+                var xhr = new XMLHttpRequest();
+                //2.指定参数
+                xhr.open('GET','/clock',true);
+                //3.状态变化之后的回调函数
+                xhr.onreadystatechange = function(){
+                    alert(xhr.readyState); //readyState状态的值，0:未初始化，1：初始化，2：发送数据，3：数据传送中，4：完成
+                }
+                //4.指定请求体发送数据
+                xhr.send();
+            },1000);
+        }
+    </script>
 </body>
 </html>

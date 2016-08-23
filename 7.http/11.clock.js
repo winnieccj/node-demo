@@ -13,6 +13,8 @@ var server = http.createServer(function(request,response){
     if( urlObj.pathname == '/apple' ){
         //query 查询字符串，true转成对象
         response.end( urlObj.query.num + '个苹果');
+    }else if( urlObj.pathname == '/clock' ){
+        response.end( new Date().toLocaleString() );
     }
 });
 
