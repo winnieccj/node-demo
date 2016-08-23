@@ -78,7 +78,29 @@
         - 403 Forbidden 禁止访问
         - 404 Not Found 资源未找到
     - 5xx 服务器错误
+## MIME媒体类型
+- MIME类型就是告诉浏览器用什么方式来处理这个数据
+- MIME类型是一种文本标记，表示一种主要的对象类型和一个特定的子类型，中间由一条斜杠来分隔。如text/html
+- MIME类型在HTTP协议中的表现为**Request Header**或者**Response Header**中的Content-Type
 
+## 处理POST请求
+当客户端采用POST方法发送数据时，服务器端可以监听request对象的data和end两个事件
+```
+var http = require('http');
+http.createServer(function(req,res){
+    var content = '';
+    console.log(req.headers.name);
+    req.on('data',function(chunk){ //监听客户端的数据
+        content += chunk;
+    });
+    req.on('end',function(){ //接收完毕
+        res.writeHead(200,{'Content-Type':'text/html;charset=utf-8'});
+        res.write('receive:' + content);
+        res.end();
+    })
+}).listen(8080);
+```
+data事件会在数据接收过程中，**每收到一段数据**就触发一次，接收到的数据被传入回调函数，end事件则是在**所有数据**接收完成后触发。
 
 [HTTP Content-Type 对照表](http://tool.oschina.net/commons)
 [使用mime模块来响应css、js文件的请求](http://www.myexception.cn/HTML-CSS/1872593.html)
